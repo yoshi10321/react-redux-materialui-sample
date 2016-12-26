@@ -7,11 +7,14 @@ export default class CommonDrawer extends React.PureComponent {
 
   constructor (props) {
     super(props)
-    this.handleToggle = this.handleToggle.bind(this)
     this.state = {open: false}
+    this.handleToggle = this.handleToggle.bind(this)
+    this.handleClose = this.handleClose.bind(this)
   }
 
   handleToggle () { this.setState({open: !this.state.open}) }
+
+  handleClose () { this.setState({open: false}) }
 
   render () {
     return (
@@ -28,9 +31,9 @@ export default class CommonDrawer extends React.PureComponent {
           open={this.state.open}
           onRequestChange={(open) => this.setState({open})}
           >
-          <MenuItem>Menu1</MenuItem>
-          <MenuItem>Menu2</MenuItem>
-          <MenuItem>Menu3</MenuItem>
+          <MenuItem onTouchTap={this.handleClose}>Menu1</MenuItem>
+          <MenuItem onTouchTap={this.handleClose}>Menu2</MenuItem>
+          <MenuItem onTouchTap={this.handleClose}>Menu3</MenuItem>
         </Drawer>
       </div>
     )
