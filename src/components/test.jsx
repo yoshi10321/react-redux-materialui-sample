@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { increment } from '../actions/test.jsx'
+import { increment } from '../actions/test'
 
 export var Test = class Test extends React.PureComponent {
 

@@ -1,9 +1,9 @@
 import injectTapEventPlugin from 'react-tap-event-plugin'
 import React from 'react'
 import { connect } from 'react-redux'
-import Test from '../components/test.jsx'
-import Drawer from '../components/drawer.jsx'
-import AjaxSample from '../components/ajax.jsx'
+import Test from '../components/test'
+import Drawer from '../components/drawer'
+import AjaxSample from '../components/ajax'
 
 injectTapEventPlugin()
 

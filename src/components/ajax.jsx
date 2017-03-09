@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { fetchSomeResource } from '../actions/ajax.jsx'
+import { fetchSomeResource } from '../actions/ajax'
 
 export class AjaxSample extends React.PureComponent {
 
