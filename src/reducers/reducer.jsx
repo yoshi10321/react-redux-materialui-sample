@@ -1,17 +1,11 @@
-const initialState = {
-  fuga: 1,
-  text: 'レスポンス'
-}
+import { combineReducers } from 'redux'
 
-export default function reducer (state = initialState, action) {
-  switch (action.type) {
-    case 'INCREMENT': {
-      return { fuga: state.fuga + 1 }
-    }
-    case 'REQUEST_SUCCESS': {
-      return { text: action.text }
-    }
-    default:
-      return state
-  }
-}
+import userList from './userList'
+import sample from './sample'
+
+const reducer = combineReducers({
+  userList,
+  sample
+})
+
+export default reducer
