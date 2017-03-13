@@ -1,19 +1,27 @@
 import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
+import {List, ListItem} from 'material-ui/List'
+import {Card, CardTitle} from 'material-ui/Card'
 
 export class UserList extends React.PureComponent {
 
   render () {
     const { userList } = this.props
-    console.log(userList.data)
     const listItems = userList.data.map((user) =>
-      <li key={user.id}>{user.name} {user.age} {user.email}</li>
+      <ListItem
+        key={user.id}
+        primaryText={user.name}
+        secondaryText={
+          <p>{user.email}</p>
+        } />
     )
 
     return (
       <div>
-        <p>UserList</p>
-        <ul>{listItems}</ul>
+        <Card>
+          <CardTitle title='UserList' />
+          <List>{listItems}</List>
+        </Card>
       </div>
     )
   }
