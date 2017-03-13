@@ -8,9 +8,6 @@ function sample (state = initialState, action) {
     case 'INCREMENT': {
       return { fuga: state.fuga + 1 }
     }
-    case 'REQUEST_SUCCESS': {
-      return { text: action.text }
-    }
     default:
       return state
   }

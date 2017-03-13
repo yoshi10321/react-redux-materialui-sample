@@ -3,7 +3,6 @@ import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
 import Test from '../components/test'
 import Drawer from '../components/drawer'
-import AjaxSample from '../components/ajax'
 import UserList from '../components/userList'
 import { fetchUserList } from '../actions/userList'
 
@@ -23,7 +22,6 @@ export var Top = class Top extends React.PureComponent {
         <h1>top page</h1>
         <Test />
         <br />
-        <AjaxSample />
         <UserList userList={userList} />
       </div>
     )
