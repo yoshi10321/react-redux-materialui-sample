@@ -8,7 +8,7 @@ import thunk from 'redux-thunk'
 import reducer from './reducers/reducer.jsx'
 import Top from './containers/Top.jsx'
 
-require('./main.css')
+// require('./main.css')
 
 const store = applyMiddleware(thunk)(createStore)(reducer)
 
