@@ -9,6 +9,7 @@ import reducer from './reducers/reducer.jsx'
 import Top from './containers/Top.jsx'
 
 // require('./main.css')
+require('../scss/index.scss')
 
 const store = applyMiddleware(thunk)(createStore)(reducer)
 

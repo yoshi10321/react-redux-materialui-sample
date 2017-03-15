@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import {List, ListItem} from 'material-ui/List'
 import {Card, CardTitle} from 'material-ui/Card'
 
+require('../../scss/userList.scss')
+
 export class UserList extends React.PureComponent {
 
   render () {
@@ -18,7 +20,7 @@ export class UserList extends React.PureComponent {
 
     return (
       <div>
-        <Card>
+        <Card className='userListCard'>
           <CardTitle title='UserList' />
           <List>{listItems}</List>
         </Card>
